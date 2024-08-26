@@ -29,7 +29,7 @@ for index in naive_error:
 print("Nombre d'erreurs:", len(naive_errors),"\n")
 
 print("Hamming distances:", np.round(hamming_distances, 2))
-best_hypothesis = CS.N_best_hypothesis(16, hamming_distances)
+best_hypothesis = CS.N_best_hypothesis(2, hamming_distances)
 print("Meilleures hypothèses:", best_hypothesis, "\n")
 soft_decoding_guess, RAPn = CS.soft_decoding(best_hypothesis, received_signal)
 print("Message:", message, "Soft Decoding Guess:", soft_decoding_guess, RAPn, "Hard Decoding Guess:", guess)
